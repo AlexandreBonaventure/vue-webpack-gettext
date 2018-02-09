@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const shell = require('shelljs')
 const path = require('path')
 const fs = require('fs')
@@ -75,10 +76,10 @@ Promise.all(renderPromises).then((results) => {
   fs.writeFileSync(outputFile, extractor.toString())
 
   // note: vue files contain js code too
-  const jsFiles = glob.sync(`${srcFolder}/**/*.js`).concat(vueFiles)
+  //const jsFiles = glob.sync(`${srcFolder}/**/*.js`).concat(vueFiles)
 
   // extract from js
-  shell.exec(`xgettext --language=JavaScript --keyword=npgettext:1c,2,3 \
-    --from-code=utf-8 --join-existing --add-comments --no-wrap \
-    --output ${outputFile} ${jsFiles.join(' ')}`)
+  //shell.exec(`xgettext --language=JavaScript --keyword=npgettext:1c,2,3 \
+  //  --from-code=utf-8 --join-existing --add-comments --no-wrap \
+  //  --output ${outputFile} ${jsFiles.join(' ')}`)
 })
