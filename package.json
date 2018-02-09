@@ -4,7 +4,7 @@
   "description": "Extract and compile translations with vue-gettext and vue-loader, i.e. for .vue files with <template lang='pug'></template>",
   "main": "extract.js",
   "bin" : { 
-    "vue-webpack-gettext-extract" : "./extract.js", 
+    "vue-webpack-gettext-extract" : "./extract.js"
   },
   "dependencies": {
     "consolidate": "^0.14.5",
