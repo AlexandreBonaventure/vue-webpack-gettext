@@ -36,7 +36,9 @@ if (finalAttrs.indexOf('v-translate') === -1) {
 
 const extractor = new Extractor({
   lineNumbers: true,
-  attributes: finalAttrs
+  attributes: finalAttrs,
+  startDelimiter: '$t(\'',
+  endDelimiter: '\')',
 })
 
 const vueFiles = glob.sync(`${srcFolder}/**/*.vue`)
